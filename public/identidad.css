@@ -1,0 +1,152 @@
+:root,
+:root[data-theme="light"] {
+  --paper: #f3f5f2;
+  --canvas: #fffefa;
+  --border: #d9e2df;
+  --text: #172e35;
+  --subdued: #486066;
+  --petrol: #185763;
+  --petrol-deep: #103c46;
+  --petrol-pale: #dfefed;
+  --wheat: #f4d578;
+  --wheat-pale: #fbf0cf;
+  --night: #102b35;
+  --night-text: #e6f2ee;
+  --focus: #23619f;
+  --lift: 0 12px 28px #17313b0d;
+
+  --bg: var(--paper);
+  --cream: var(--paper);
+  --surface: var(--canvas);
+  --white: var(--canvas);
+  --surface-2: #eef2ee;
+  --line: var(--border);
+  --ink: var(--text);
+  --muted: var(--subdued);
+  --em: var(--petrol);
+  --em-deep: var(--petrol-deep);
+  --em-soft: var(--petrol-pale);
+  --em-ink: #fff;
+  --green: var(--petrol);
+  --leaf: #33817c;
+  --lime: var(--wheat);
+  --lime-soft: var(--wheat-pale);
+  --on-lime: var(--night);
+  --gold: var(--wheat);
+  --gold-soft: var(--wheat-pale);
+  --blue: var(--focus);
+  --blue-soft: #e3eef9;
+  --r: 16px;
+  --shadow: 0 1px 2px #17313b0a;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.topbar,
+.top {
+  background: var(--canvas);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px #102b3508;
+}
+.brand,
+.logo { color: var(--night); }
+.brand-symbol,
+.mark {
+  border-radius: 50%;
+  background: var(--petrol-pale);
+  border-color: var(--border);
+}
+.navbar .wrap { padding-block: 4px; }
+.navbar a,
+#navigation a {
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+.navbar a.on,
+#navigation a[aria-current] {
+  background: transparent;
+  border-color: var(--petrol);
+  color: var(--petrol-deep);
+}
+.navbar a:hover,
+#navigation a:hover { background: var(--petrol-pale); }
+.user-chip,
+.user-chip[aria-current] { background: var(--petrol-pale); border-color: var(--border); }
+.demo-band { background: var(--wheat-pale); }
+
+.hero {
+  background: var(--night);
+  border-radius: 22px;
+  box-shadow: var(--lift);
+}
+.hero-copy :is(.eyebrow, em) { color: var(--wheat); }
+.hero-copy h1 {
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+.hero :is(.lead, p) { color: var(--night-text); }
+.hero .button,
+.hero .btn.lime { color: var(--night); background: var(--wheat); }
+.hero .button:hover,
+.hero .btn.lime:hover { background: #ffe49a; }
+.hero .hero-secondary { border-color: #83a5aa; }
+.hero .hero-secondary:hover { background: #1b434d; }
+.hero :focus-visible { outline-color: var(--wheat); }
+:is(.harvest-photo, .hero-photo) figcaption { background: #102b35ed; }
+
+.card,
+.panel,
+.metric,
+.kpi { border-color: var(--border); }
+.card,
+.panel { background: var(--canvas); }
+.home-market .card,
+.section .card { box-shadow: var(--lift); }
+.home-tool {
+  border-left: 1px solid var(--border);
+  border-top: 3px solid #8bb6b3;
+  min-height: 108px;
+}
+.home-tool:hover {
+  border-color: var(--petrol);
+  background: var(--petrol-pale);
+}
+.metric,
+.kpi { border-top: 3px solid #8bb6b3; }
+.kpi.loss { border-top-color: var(--coral); }
+.kpi.warn { border-top-color: var(--orange); }
+.price,
+.metric strong { color: var(--petrol-deep); }
+.badge,
+.tabs a[aria-current] { color: var(--petrol-deep); background: var(--petrol-pale); }
+.b-loss { color: var(--coral); background: var(--coral-soft); }
+.b-ora { color: var(--orange); background: var(--orange-soft); }
+.b-risk { color: #725000; background: var(--wheat-pale); }
+.b-info { color: var(--focus); background: var(--blue-soft); }
+.b-mute { color: var(--subdued); background: var(--surface-2); }
+.btn.pri,
+.button:not(.secondary),
+button[type="submit"]:not(.secondary) { box-shadow: 0 2px 4px #102b351a; }
+.btn.pri:hover,
+.button:not(.secondary):not(.hero .button):hover,
+button[type="submit"]:not(.secondary):hover { background: var(--petrol-deep); }
+.btn.sec,
+.secondary,
+input,
+select,
+textarea { border-color: #a6bbb9; }
+.message { background: var(--surface-2); }
+.message.mine { background: var(--petrol-pale); }
+.footer,
+.foot { border-top: 1px solid var(--border); }
+
+@media (max-width: 720px) {
+  .hero { border-radius: 16px; }
+  .hero-copy h1 { font-size: clamp(2.55rem, 9vw, 3.9rem); }
+  .top .top-inner { align-items: flex-start; }
+  .top #navigation { width: 100%; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+  #navigation a { flex: none; }
+}
